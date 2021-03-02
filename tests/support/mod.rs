@@ -43,6 +43,12 @@ mod cluster;
 #[cfg(feature = "cluster")]
 pub use self::cluster::*;
 
+#[cfg(feature = "sentinel")]
+mod sentinel;
+
+#[cfg(feature = "sentinel")]
+pub use self::sentinel::*;
+
 #[derive(PartialEq)]
 enum ServerType {
     Tcp { tls: bool },
